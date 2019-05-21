@@ -1,0 +1,13 @@
+.table-main .code-slot{display:inline-block;padding:2px 3px;background:#eee;border-radius:3px;cursor: pointer;}
+.table-main .code-slot:hover,.table-main .code-slot.cur{background:#3e8ecb;color:#fff;}
+.table-main .close{position: relative;margin:0 5px;}
+.table-main .close::after{content:'';margin-left:5px;display:inline-block;width:15px;height:15px;background:url(../images/close.png) no-repeat;background-size:15px auto;vertical-align:-3px;}
+.table-main .add-part.cur .close{background:red;}
+.table-main td{position: relative;}
+.add-group{margin-bottom:5px;padding-bottom: 5px;border-bottom: 1px solid #cac8c8;}
+.add-all{position: relative;}
+.add-part{margin-bottom:5px;padding-bottom: 5px;height:32px;margin-right:25px;}
+.add-part2{border-bottom: 1px solid #cac8c8;}
+.add-part .code-slot{background:#3e8ecb;color:#fff;}
+.add-btn{position:absolute;right:0px;top:50%;width:20px;height:20px;margin-top:-10px;cursor:pointer;background:url(../images/add.png) no-repeat;background-size:20px auto;display: none;z-index: 999}
+.saveBtn{width:100px;height:40px;margin:0 auto;display: block;}

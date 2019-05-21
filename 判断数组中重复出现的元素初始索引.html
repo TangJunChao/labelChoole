@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断数组中重复出现的元素初始索引</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var arr=[12,22,22,32,32,22,12,3];
+		// function arrIndex(arr){
+		// 	var obj = {};
+		// 	for(i in arr){
+		// 		// obj为空对象时
+		// 		if(!obj[arr[i]]){
+		// 			// obj对象内容添加不重复的arr值 12，22，32
+		// 			obj[arr[i]]=[i];
+		// 		}else{
+		// 			// 有内容的情况下，obj键值为 32，22，12
+		// 			console.log(obj)
+		// 			obj[arr[i]][1]=i;
+		// 		}
+		// 	}
+		// 	for(i in obj){
+		// 		if(obj[i].length==1){delete(obj[i])}
+		// 	}
+		// 	return obj;
+		// }
+
+		// arr.forEach(function(item,index){
+		// 	// console.log(item)
+		// 	if(item==22){
+		// 		console.log(index)
+		// 	}
+		// })
+
+		// console.log(arrIndex(arr))
+
+		// var arr= [1,2,3,4,5,4,3,2,1,1];
+		var arr = ['a','b','c','d','c','z','c','f','d','a','c']
+		var narr=[];
+		for(var i=0;i<arr.length;i++){
+			if(narr.indexOf(arr[i])==-1){
+				narr.push(arr[i]);
+			}
+		}
+		console.log(narr);
+		var obj = {};
+		for(i in arr){
+			if(!obj[arr[i]]){
+				obj[arr[i]]=[i];
+			}else{
+				obj[arr[i]][i]=i;
+			}
+		}
+		for(i in obj){
+			if(obj[i].length==1){delete(obj[i])}
+		}
+		console.log(obj);
+	</script>
+</body>
+</html>
